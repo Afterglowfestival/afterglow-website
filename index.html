@@ -244,24 +244,20 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
 .lb-counter{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-top:12px}
 
 
-.past-event{display:grid;grid-template-columns:1fr;gap:0;border-bottom:1px solid rgba(255,255,255,0.08);transition:background 0.2s;overflow:hidden}
-.past-event:hover{background:rgba(255,255,255,0.02)}
-.pe-alt{background:rgba(255,107,0,0.05)}
-.pe-poster{width:100%;overflow:hidden;flex-shrink:0;background:#0a0a0a}
-.pe-poster img{width:100%;height:auto;max-height:600px;object-fit:contain;display:block}
-
-.pe-body{display:grid;grid-template-columns:1fr;gap:12px;padding:16px 20px}
-.pe-date-col{text-align:center;flex-shrink:0}
-.pe-day{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--yellow);line-height:1}
-.pe-month{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.45);text-transform:uppercase;margin-top:2px}
-.pe-year{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-top:2px}
-.pe-tag{font-size:10px;letter-spacing:3px;color:var(--yellow);text-transform:uppercase;margin-bottom:8px}
-.pe-title{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff;letter-spacing:1px;line-height:1;margin-bottom:6px}
-.pe-meta{font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:1px;margin-bottom:10px}
-.pe-desc{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.75}
-.pe-number{font-family:'Bebas Neue',sans-serif;font-size:72px;color:rgba(255,255,255,0.04);line-height:1;text-align:right;align-self:center}
+.pe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:8px 0 48px}
+.past-event{display:flex;flex-direction:column;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;transition:transform 0.2s,border-color 0.2s}
+.past-event:hover{transform:translateY(-3px);border-color:rgba(255,107,0,0.4)}
+.pe-alt{background:rgba(255,255,255,0.03)}
+.pe-poster{width:100%;background:#0c0c0c;overflow:hidden}
+.pe-poster img{width:100%;height:auto;object-fit:contain;display:block}
+.pe-body{padding:20px;display:flex;flex-direction:column;gap:4px;flex:1}
 .pe-date-col{display:none}
+.pe-tag{font-size:10px;letter-spacing:3px;color:var(--yellow);text-transform:uppercase;margin-bottom:4px}
+.pe-title{font-family:'Bebas Neue',sans-serif;font-size:26px;color:#fff;letter-spacing:1px;line-height:1.1;margin-bottom:2px}
+.pe-meta{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.5px;margin-bottom:8px}
+.pe-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;border-top:1px solid rgba(255,255,255,0.06);padding-top:12px;margin-top:auto}
 .pe-number{display:none}
+.pe-day,.pe-month,.pe-year{display:none}
 
 
 .nav-logo-img{height:120px;width:auto;display:block;transition:opacity 0.2s}
@@ -329,10 +325,8 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
   .g1 img,.g2 img,.g3 img,.g4 img,.g5 img,.g6 img,.g7 img,.g8 img,.g9 img{height:200px}
   .caption-bar{flex-direction:column;gap:6px;padding:16px 20px;text-align:center}
 
-  .past-event{grid-template-columns:1fr}
-  .pe-poster{width:100%}
-  .pe-poster img{max-height:500px;object-fit:contain}
-  .pe-body{grid-template-columns:1fr;gap:12px;padding:20px}
+  .pe-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .pe-poster img{max-height:360px}
   .pe-number{display:none}
 
   .ct-grid{grid-template-columns:1fr;gap:32px}
@@ -680,7 +674,7 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
   <section class="sec sec-dark">
     <div class="sec-lbl">Event history</div>
     <div class="sec-title">All events</div>
-
+    <div class="pe-grid">
 
     <!-- EVENT 6 — most recent first -->
     <div class="past-event">
@@ -795,6 +789,8 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
         <div class="pe-number">01</div>
       </div>
     </div>
+
+    </div><!-- end pe-grid -->
 
     <!-- CTA -->
     <div style="margin-top:48px;padding:40px;background:rgba(255,107,0,0.12);border-left:3px solid var(--yellow);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px">
