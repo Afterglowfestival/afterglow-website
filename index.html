@@ -188,13 +188,13 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
 .warning-bar p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8}
 
 /* ─── GALLERY ─── */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
-.gallery-item{overflow:hidden;position:relative;cursor:pointer;background:var(--black)}
-.gallery-item img{width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s,filter 0.4s;filter:brightness(1)}
-.gallery-item:hover img{transform:scale(1.04);filter:brightness(1)}
-.gi-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.3s;display:flex;align-items:flex-end;padding:20px}
-.gallery-item:hover .gi-overlay{background:rgba(0,0,0,0.35)}
-.gi-label{font-size:11px;letter-spacing:2px;color:rgba(255,255,255,0);text-transform:uppercase;transition:color 0.3s;font-weight:500}
+.gallery-grid{column-count:4;column-gap:4px}
+.gallery-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;position:relative;cursor:pointer;display:block}
+.gallery-item img{width:100%;height:auto;display:block;transition:transform 0.4s,filter 0.4s;filter:brightness(0.95)}
+.gallery-item:hover img{transform:scale(1.03);filter:brightness(1)}
+.gi-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.3s;display:flex;align-items:flex-end;padding:16px}
+.gallery-item:hover .gi-overlay{background:rgba(0,0,0,0.3)}
+.gi-label{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0);text-transform:uppercase;transition:color 0.3s;font-weight:500}
 .gallery-item:hover .gi-label{color:var(--yellow)}
 .caption-bar{background:var(--black);padding:22px 40px;display:flex;justify-content:space-between;align-items:center}
 .caption-lbl{font-size:13px;color:rgba(255,255,255,0.25)}
@@ -318,9 +318,9 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
   .island-grid{grid-template-columns:1fr;gap:32px}
   .transport-grid{grid-template-columns:1fr}
 
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{grid-column:auto;grid-row:auto}
-  .gallery-item img{height:160px}
+  .gallery-grid{column-count:2;column-gap:3px}
+  .gallery-item{margin-bottom:3px}
+  .gallery-item img{height:auto}
   .caption-bar{flex-direction:column;gap:6px;padding:16px 20px;text-align:center}
 
   .pe-grid{grid-template-columns:repeat(2,1fr);gap:16px}
