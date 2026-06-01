@@ -188,11 +188,9 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
 .warning-bar p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8}
 
 /* ─── GALLERY ─── */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.g1,.g2,.g3{grid-column:span 4;grid-row:auto}.g4,.g5,.g6,.g7,.g8,.g9{grid-column:span 4;grid-row:auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
 .gallery-item{overflow:hidden;position:relative;cursor:pointer;background:var(--black)}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s,filter 0.4s;filter:brightness(1)}
-.g1 img,.g2 img,.g3 img,.g4 img,.g5 img,.g6 img,.g7 img,.g8 img,.g9 img{height:400px}
+.gallery-item img{width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s,filter 0.4s;filter:brightness(1)}
 .gallery-item:hover img{transform:scale(1.04);filter:brightness(1)}
 .gi-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.3s;display:flex;align-items:flex-end;padding:20px}
 .gallery-item:hover .gi-overlay{background:rgba(0,0,0,0.35)}
@@ -322,7 +320,7 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
 
   .gallery-grid{grid-template-columns:1fr 1fr}
   .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9{grid-column:auto;grid-row:auto}
-  .g1 img,.g2 img,.g3 img,.g4 img,.g5 img,.g6 img,.g7 img,.g8 img,.g9 img{height:200px}
+  .gallery-item img{height:160px}
   .caption-bar{flex-direction:column;gap:6px;padding:16px 20px;text-align:center}
 
   .pe-grid{grid-template-columns:repeat(2,1fr);gap:16px}
