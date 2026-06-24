@@ -807,6 +807,7 @@ footer{background:var(--black);padding:28px 40px;display:flex;justify-content:sp
 <!-- JOIN PAGE (hidden from nav) -->
 <div id="page-join" class="page">
   <div style="background:var(--black);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:4px;color:#fff;margin-bottom:48px">AFTER<span style="color:var(--yellow)">GLOW</span></div>
     <div style="font-size:11px;letter-spacing:5px;color:var(--yellow);text-transform:uppercase;margin-bottom:16px">Afterglow Festival · Aotea, Great Barrier Island</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:72px;color:#fff;letter-spacing:4px;line-height:1;margin-bottom:12px">Be The First <span style="color:var(--yellow)">To Know</span></div>
     <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:480px;margin:0 auto 48px;line-height:1.8">Tickets on sale soon. Sign up below to get notified the moment they drop.</p>
@@ -866,6 +867,10 @@ function nav(page) {
   window.scrollTo(0, 0);
   if (page === 'gallery') buildGallery();
   location.hash = page === 'home' ? '' : page;
+  const navEl = document.querySelector('nav');
+  const tickerEl = document.querySelector('.ticker');
+  if (navEl) navEl.style.display = page === 'join' ? 'none' : '';
+  if (tickerEl) tickerEl.style.display = page === 'join' ? 'none' : '';
 }
 
 // Handle hash on load
