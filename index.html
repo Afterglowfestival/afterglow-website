@@ -866,7 +866,6 @@ function nav(page) {
   }
   window.scrollTo(0, 0);
   if (page === 'gallery') buildGallery();
-  if (page === 'join') setTimeout(() => { if(typeof showFlicketForm === 'function') showFlicketForm(); }, 500);
   location.hash = page === 'home' ? '' : page;
   const navEl = document.querySelector('nav');
   const tickerEl = document.querySelector('.ticker');
