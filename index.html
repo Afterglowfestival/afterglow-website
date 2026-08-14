@@ -8,7 +8,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--orange:#FF6B00;--yellow:#FFE000;--black:#0a0a0a;--dark-orange:#FF8C2A;--bright-orange:#FF5500;--festival-purple:#2D1B4E;--festival-teal:#00C9A7}
+:root{--orange:#FF6B00;--yellow:#FFE000;--black:#0d0520;--dark-orange:#FF8C2A;--bright-orange:#FF5500;--festival-purple:#2D1B4E;--festival-teal:#00C9A7;--deep-purple:#0d0520;--magenta:#C8287A;--mid-purple:#3a1a6e}
 body{background:var(--orange);font-family:'DM Sans',sans-serif;color:#fff;min-height:100vh}
 
 /* PAGE SYSTEM */
@@ -16,7 +16,7 @@ body{background:var(--orange);font-family:'DM Sans',sans-serif;color:#fff;min-he
 .page.active{display:block}
 
 /* NAV */
-nav{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:130px;background:var(--black);border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+nav{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:130px;background:linear-gradient(90deg,#0d0520 0%,#1a0a3a 100%);border-bottom:1px solid rgba(200,40,122,0.3);position:sticky;top:0;z-index:100}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:#fff;cursor:pointer;border:none;background:none;font-family:'Bebas Neue',sans-serif}
 .nav-logo span{color:var(--yellow)}
 .nav-links{display:flex;gap:22px;align-items:center}
@@ -34,14 +34,14 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:0 40px
 .nav-cta:hover{background:var(--yellow);color:var(--black)}
 
 /* TICKER */
-.ticker{background:var(--bright-orange);padding:8px 0;overflow:hidden;white-space:nowrap}
+.ticker{background:linear-gradient(90deg,#C8287A,#FF6B00,#C8287A);padding:8px 0;overflow:hidden;white-space:nowrap}
 .tick-inner{display:inline-block;animation:tick 22s linear infinite}
 .tick-inner span{font-size:11px;font-weight:500;letter-spacing:3px;color:#000;text-transform:uppercase;padding:0 28px}
 .tick-inner span::after{content:"·";margin-left:28px;opacity:0.4}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* PAGE HERO */
-.page-hero{background:var(--black);padding:64px 40px 48px;text-align:center;position:relative;overflow:hidden}
+.page-hero{background:linear-gradient(160deg,#0d0520 0%,#2D1B4E 60%,#3a1a6e 100%);padding:64px 40px 48px;text-align:center;position:relative;overflow:hidden}
 .page-hero-bg{position:absolute;font-family:'Bebas Neue',sans-serif;font-size:200px;color:rgba(255,255,255,0.018);top:50%;left:50%;transform:translate(-50%,-50%);letter-spacing:20px;white-space:nowrap;pointer-events:none;z-index:0}
 .page-hero>*{position:relative;z-index:1}
 .ph-lbl{font-size:11px;letter-spacing:5px;color:var(--yellow);text-transform:uppercase;margin-bottom:10px}
@@ -51,8 +51,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:0 40px
 
 /* SECTIONS */
 .sec{padding:64px 40px;background:var(--orange)}
-.sec-alt{background:var(--dark-orange)}
-.sec-dark{background:var(--black)}
+.sec-alt{background:linear-gradient(135deg,#3a1a6e 0%,#FF6B00 100%)}
+.sec-dark{background:linear-gradient(160deg,#1a0a3a 0%,#2D1B4E 100%)}
 .sec-lbl{font-size:10px;letter-spacing:4px;color:var(--yellow);text-transform:uppercase;margin-bottom:8px}
 .sec-title{font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:2px;color:#fff;margin-bottom:32px;line-height:1}
 
@@ -65,7 +65,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:0 40px
 .btn-dark:hover{background:var(--yellow);color:var(--black)}
 
 /* FOOTER */
-footer{background:var(--black);padding:28px 40px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.06)}
+footer{background:linear-gradient(90deg,#0d0520 0%,#1a0a3a 100%);padding:28px 40px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(200,40,122,0.3)}
 .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:rgba(255,255,255,0.25);cursor:pointer;background:none;border:none}
 .footer-logo span{color:rgba(255,224,0,0.5)}
 .footer-copy{font-size:11px;color:rgba(255,255,255,0.18)}
